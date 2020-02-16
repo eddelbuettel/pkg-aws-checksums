@@ -1,0 +1,5 @@
+Inofficial local Debian package for the AWS Checksums C Implementation
+
+Upstream:  https://github.com/awslabs/aws-checksums
+
+Packaged by Dirk Eddelbuettel <edd@debian.org>

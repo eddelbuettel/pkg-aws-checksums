@@ -1,0 +1,5 @@
+aws-checksums (0.1.5-1) bionic; urgency=low
+
+  * Informal and unofficial package
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Sat, 15 Feb 2020 15:11:12 -0600

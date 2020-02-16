@@ -1,0 +1,18 @@
+Source: aws-checksums
+Section: devel
+Priority: optional
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Standards-Version: 4.4.0
+Build-Depends: debhelper (>= 11~), gcc (>= 4:4.0), binutils (>= 2.12.90.0.9), cmake, libaws-c-common-dev
+Homepage: https://github.com/awslabs/aws-checksums
+
+Package: libaws-checksums-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: AWS CRC32c and CRC32 C Interface -- development package
+ Inofficial package. Currently contains a static (not shared) library.
+ .
+ Cross-Platform HW accelerated CRC32c and CRC32 with fallback to
+ efficient SW implementations. C interface with language bindings for
+ each of our SDKs
