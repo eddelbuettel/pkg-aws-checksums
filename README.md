@@ -19,7 +19,7 @@ Create yourself a `.orig.tar.gz` and use it with `dpkg-buildpackage` as for exam
 ```sh
 cd ..
 tar cvz --exclude=.git --exclude=debian --exclude=build \
-	--file aws-checksums_0.1.5-1.orig.tar.gz pkg-aws-checksums
+	--file aws-checksums_0.1.5.orig.tar.gz pkg-aws-checksums
 cd -
 dpkg-buildpackage -rfakeroot -us -uc -tc
 ```
