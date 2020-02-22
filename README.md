@@ -8,20 +8,17 @@ https://github.com/awslabs/aws-checksums
 
 No changes made other than
 
+- downloading / copying all files _as is_ into `pkg/`
 - addition of debian/ directory for unofficial / informal Debian packaging
 - addition of this README.md to document the changes
-- renaming README.md to orig.README.md to make room for this file
 
 ### Usage
 
 Create yourself a `.orig.tar.gz` and use it with `dpkg-buildpackage` as for example via 
 
 ```sh
-cd ..
-tar cvz --exclude=.git --exclude=debian --exclude=build \
-	--file aws-checksums_0.1.5.orig.tar.gz pkg-aws-checksums
-cd -
-dpkg-buildpackage -rfakeroot -us -uc -tc
+tar cvz --exclude=.git --exclude=debian --file aws-checksums_0.1.5.orig.tar.gz pkg
+cd pkg && dpkg-buildpackage -rfakeroot -us -uc -tc
 ```
 
 which will create the `.deb` package you can install, the related
