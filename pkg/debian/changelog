@@ -1,4 +1,10 @@
-aws-checksums (0.1.5-1) bionic; urgency=low
+aws-checksums (0.1.5-1debian) unstable; urgency=medium
+
+  * Debian build of informal and unofficial package
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Fri, 06 Mar 2020 15:40:41 -0600
+
+aws-checksums (0.1.5-1.1804.1) bionic; urgency=medium
 
   * Informal and unofficial package
 
