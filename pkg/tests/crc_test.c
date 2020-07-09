@@ -1,21 +1,11 @@
-/*
- * Copyright 2010-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License").
- * You may not use this file except in compliance with the License.
- * A copy of the License is located at
- *
- *  http://aws.amazon.com/apache2.0
- *
- * or in the "license" file accompanying this file. This file is distributed
- * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language governing
- * permissions and limitations under the License.
+/**
+ * Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ * SPDX-License-Identifier: Apache-2.0.
  */
 
 #include <aws/checksums/crc.h>
 #include <aws/checksums/private/crc_priv.h>
-#include <test_macros.h>
+#include <aws/testing/aws_test_harness.h>
 
 static const uint8_t DATA_32_ZEROS[32] = {0};
 static const uint32_t KNOWN_CRC32_32_ZEROES = 0x190A55AD;
@@ -59,9 +49,7 @@ static int s_test_known_crc(
 
     ASSERT_HEX_EQUALS(expected, crc1, "one byte at a time %s(%s)", func_name, data_name);
 
-    RETURN_SUCCESS("%s() pass", func_name);
-failure:
-    return FAILURE;
+    return AWS_OP_SUCCESS;
 }
 
 /* helper function that groups crc32 tests*/
@@ -102,7 +90,10 @@ static int s_test_known_crc32c(const char *func_name, crc_fn *func) {
  * Quick sanity check of some known CRC values for known input.
  * The reference functions are included in these tests to verify that they aren't obviously broken.
  */
-static int s_test_crc32c(void) {
+static int s_test_crc32c(struct aws_allocator *allocator, void *ctx) {
+    (void)allocator;
+    (void)ctx;
+
     int res = 0;
 
     res |= s_test_known_crc32c(CRC_FUNC_NAME(aws_checksums_crc32c));
@@ -110,10 +101,15 @@ static int s_test_crc32c(void) {
 
     return res;
 }
+AWS_TEST_CASE(test_crc32c, s_test_crc32c)
 
-static int s_test_crc32(void) {
+static int s_test_crc32(struct aws_allocator *allocator, void *ctx) {
+    (void)allocator;
+    (void)ctx;
+
     int res = 0;
     res |= s_test_known_crc32(CRC_FUNC_NAME(aws_checksums_crc32));
 
     return res;
 }
+AWS_TEST_CASE(test_crc32, s_test_crc32)

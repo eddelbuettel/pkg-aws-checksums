@@ -4,6 +4,8 @@
 Taken as a complete snapshot on 2020-02-15 at sha1 519d6d9 from
 https://github.com/awslabs/aws-checksums
 
+Updated 2020-07-09 with release 0.1.7 sha1 d700597
+
 ### Changes
 
 No changes made other than
