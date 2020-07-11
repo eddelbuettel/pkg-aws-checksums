@@ -4,7 +4,9 @@
 Taken as a complete snapshot on 2020-02-15 at sha1 519d6d9 from
 https://github.com/awslabs/aws-checksums
 
-Updated 2020-07-09 with release 0.1.7 sha1 d700597
+Updated 2020-07-09 with release 0.1.7 sha1 d700597  
+NB: Does not currently build so sticking with previous version 0.1.5
+is recommended.
 
 ### Changes
 
@@ -19,7 +21,7 @@ No changes made other than
 Create yourself a `.orig.tar.gz` and use it with `dpkg-buildpackage` as for example via 
 
 ```sh
-tar cvz --exclude=.git --exclude=debian --file aws-checksums_0.1.5.orig.tar.gz pkg
+tar cvz --exclude=.git --exclude=debian --file aws-checksums_0.1.7.orig.tar.gz pkg
 cd pkg && dpkg-buildpackage -rfakeroot -us -uc -tc
 ```
 
