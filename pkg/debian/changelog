@@ -1,9 +1,21 @@
+aws-checksums (0.1.5-1.2004.1) focal; urgency=medium
+
+  * Informal and unofficial package (in different PPA)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu, 09 Jul 2020 14:03:34 -0500
+
+aws-checksums (0.1.5-1.1804.1) bionic; urgency=medium
+
+  * Informal and unofficial package (in different PPA)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu, 09 Jul 2020 14:02:39 -0500
+
 aws-checksums (0.1.7-1.1804.1) bionic; urgency=medium
 
   * Ubuntu PPA build of informal and unofficial package -- does NOT build
 
  -- Dirk Eddelbuettel <edd@debian.org>  Thu, 09 Jul 2020 18:48:34 +0000
-
+ 
 aws-checksums (0.1.5-1debian) unstable; urgency=medium
 
   * Debian build of informal and unofficial package
