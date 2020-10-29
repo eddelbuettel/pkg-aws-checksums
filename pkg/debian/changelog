@@ -1,3 +1,10 @@
+aws-checksums (0.1.9-1.2004.1) unstable; urgency=medium
+
+  * Updated to upstream 0.1.9
+  * Informal and unofficial package (in different PPA)
+
+ -- Dirk Eddelbuettel <edd@debian.org>  Thu, 29 Oct 2020 14:53:50 +0000
+
 aws-checksums (0.1.5-1.2004.1) focal; urgency=medium
 
   * Informal and unofficial package (in different PPA)
