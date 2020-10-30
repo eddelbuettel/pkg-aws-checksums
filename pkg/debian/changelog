@@ -1,4 +1,4 @@
-aws-checksums (0.1.9-1.2004.1) unstable; urgency=medium
+aws-checksums (0.1.9-1.2004.1) focal; urgency=medium
 
   * Updated to upstream 0.1.9
   * Informal and unofficial package (in different PPA)
