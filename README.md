@@ -6,7 +6,6 @@ https://github.com/awslabs/aws-checksums
 
 Updated 2020-07-09 with release 0.1.7 sha1 d700597  
 Updated 2020-10-29 with release 0.1.9 sha1 8e1a84c  
-NB: Does not currently build so sticking with previous version 0.1.5 is recommended.
 
 ### Changes
 
